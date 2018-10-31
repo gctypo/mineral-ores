@@ -26,7 +26,7 @@ public class MineralOresMod
 		@Override
 		public ItemStack getTabIconItem()
 		{
-			return new ItemStack(MineralItems.dusts.get("Magnetite"));
+			return new ItemStack(MineralItems.dusts.get("Galena"));
 		}
 	};
 	

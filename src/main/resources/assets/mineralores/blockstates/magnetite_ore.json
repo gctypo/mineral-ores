@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "mineralores:blocks/magnetite_ore_stone"
+    },
+    "model": "cube_all",
+    "uvlock": true
+  },
+  "variants": {
+    "background": {
+      "stone": { "textures": { "all": "mineralores:blocks/magnetite_ore_stone" } },
+      "netherrack": { "textures": { "all": "mineralores:blocks/magnetite_ore_netherrack" } },
+      "endstone": { "textures": { "all": "mineralores:blocks/magnetite_ore_endstone" } }
+    }
+  }
+}
