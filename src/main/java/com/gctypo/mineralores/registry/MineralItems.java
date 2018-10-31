@@ -7,7 +7,7 @@ import java.util.*;
 
 public class MineralItems
 {
-	public static Map<String, Item> dusts = new HashMap<>();
+	public static Map<String, ItemMineralDust> dusts = new HashMap<>();
 	
 	public static void addDust(ItemMineralDust item)
 	{

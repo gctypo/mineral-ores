@@ -2,6 +2,7 @@ package com.gctypo.mineralores.registry;
 
 import com.gctypo.mineralores.MineralOresMod;
 import com.gctypo.mineralores.blocks.BlockMineralOre;
+import com.gctypo.mineralores.items.ItemMineralDust;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.*;
@@ -11,6 +12,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@SuppressWarnings("ConstantConditions")
 @Mod.EventBusSubscriber(modid = MineralOresMod.MODID)
 public class RegistryHelper
 {
@@ -45,7 +47,7 @@ public class RegistryHelper
 		
 		for (Item dust : MineralItems.dusts.values())
 		{
-			//event.getRegistry().register(dust);
+			event.getRegistry().register(dust);
 		}
 	}
 	
@@ -58,9 +60,13 @@ public class RegistryHelper
 			for (BlockMineralOre.BackgroundType bg : BlockMineralOre.BackgroundType.values())
 			{
 				ModelLoader.setCustomModelResourceLocation(itemBlock, bg.getMeta(),
-					new ModelResourceLocation(itemBlock.getRegistryName(), BlockMineralOre.BACKGROUND.getName() +
-						"=" + bg.getName()));
+					new ModelResourceLocation(itemBlock.getRegistryName(), BlockMineralOre.BACKGROUND.getName() + "=" + bg.getName()));
 			}
+		}
+		
+		for (ItemMineralDust dust : MineralItems.dusts.values())
+		{
+			registerRender(dust, 0);
 		}
 	}
 	
