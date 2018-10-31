@@ -1,5 +1,6 @@
 package com.gctypo.mineralores.blocks;
 
+import com.gctypo.mineralores.MineralOresMod;
 import com.gctypo.mineralores.registry.MineralItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
@@ -38,6 +39,8 @@ public class BlockMineralOre extends BlockOre
 		
 		setRegistryName(name.toLowerCase() + "_ore");
 		setUnlocalizedName(name.toLowerCase() + "_ore");
+		
+		setCreativeTab(MineralOresMod.TAB_MINERALORES);
 		
 		setHardness(hardness);
 		setHarvestLevel("pickaxe", harvestLevel);

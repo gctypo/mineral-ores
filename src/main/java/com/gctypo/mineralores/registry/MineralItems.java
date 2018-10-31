@@ -11,7 +11,7 @@ public class MineralItems
 	
 	public static void addDust(ItemMineralDust item)
 	{
-		dusts.put(item.getUnlocalizedName(), item);
+		dusts.put(item.getName(), item);
 	}
 	
 	public static void preInit()
