@@ -1,5 +1,6 @@
 package com.gctypo.mineralores;
 
+import com.gctypo.mineralores.registry.RegistryHelper;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -20,6 +21,8 @@ public class MineralOresMod
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		logger = event.getModLog();
+		
+		RegistryHelper.preInit();
 	}
 	
 	@EventHandler
